@@ -2,10 +2,13 @@ import db from "../config/connection.js";
 import Question from "../models/Question.js";
 import cleanDB from "./cleanDb.js";
 import {promises as fs} from 'fs';
+import path from 'path';
+
 
 async function loadJson() {
-  const data = await fs.readFile('./pythonQuestions.json', 'utf-8');
-  return JSON.parse(data);
+  const filePath = path.join(__dirname, 'seeds', 'pythonQuestions.json');
+    const data = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(data);
 }
 const pythonQuestions = await loadJson();
 
