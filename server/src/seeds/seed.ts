@@ -6,9 +6,9 @@ import path from 'path';
 
 
 async function loadJson() {
-  const filePath = path.join(__dirname, 'seeds', 'pythonQuestions.json');
-    const data = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(data);
+  const filePath = path.join(__dirname, 'pythonQuestions.json');
+  const data = await fs.readFile(filePath, 'utf-8');
+  return JSON.parse(data);
 }
 const pythonQuestions = await loadJson();
 
