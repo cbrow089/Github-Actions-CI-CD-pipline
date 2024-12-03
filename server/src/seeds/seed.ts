@@ -4,7 +4,7 @@ import cleanDB from "./cleanDb.js";
 import {promises as fs} from 'fs';
 
 async function loadJson() {
-  const data = await fs.readFile('./seeds/pythonQuestions.json', 'utf-8');
+  const data = await fs.readFile('./pythonQuestions.json', 'utf-8');
   return JSON.parse(data);
 }
 const pythonQuestions = await loadJson();
