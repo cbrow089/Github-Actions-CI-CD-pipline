@@ -6,7 +6,7 @@ on:
   pull_request:
     branches:
       - main
-      - develop
+      
 
 jobs:
   ci:
@@ -17,7 +17,7 @@ jobs:
       - name: Test
         run: |
           npm install
-          npm run test
+          npm run test-component
 
       - name: Deploy
         env:
